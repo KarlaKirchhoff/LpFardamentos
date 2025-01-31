@@ -1,0 +1,11 @@
+article{
+    width: 100%;
+    display: grid;
+    grid-template-areas: "header header"
+                         "img1 img1"
+                         "p1 img2"
+                         "p2 p2"
+                         "img3 p3"
+                         "p4 p4"
+                         "img4 img4";
+}
