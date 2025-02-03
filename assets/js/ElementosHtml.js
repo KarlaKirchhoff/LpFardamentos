@@ -1,13 +1,14 @@
 class ElementosHtml {
-    navbar(){
+    navbar() {
         const nav = `
         <nav>
                 <a href="index.html" class="logo">
                     <img src="#" alt="">
+                    <p>LP<br><span>Fardamentos</span></p>   
                 </a>
 
                 <ul class="ul-paginas">
-                    <li class="li-paginas">
+                    <li class="li-paginas hidden">
                         <a href="index.html">Home</a>
                     </li>
 
@@ -15,11 +16,11 @@ class ElementosHtml {
                         <a href="assets/paginas/produtos.html">Produtos</a>
                     </li>
 
-                    <li class="li-paginas">
-                        <a href="assets/paginas/sobreNos.html">Sobre N´os</a>
+                    <li class="li-paginas hidden hidden2">
+                        <a href="assets/paginas/sobreNos.html">Sobre Nós</a>
                     </li>
 
-                    <li class="li-paginas">
+                    <li class="li-paginas hidden hidden2">
                         <a href="assets/paginas/contato.html">Contato</a>
                     </li>
                 </ul>
@@ -31,64 +32,71 @@ class ElementosHtml {
                 <div class="logo-area">
                     <img src="#" alt="">
                     <p>LP - Fardamentos e Atoalhados</p>
-
-                    <ul class="menu-navbar-paginas">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-
-                        <li>
-                            <a href="assets/paginas/produtos.html">Produtos e Serviços</a>
-                        </li>
-
-                        <li>
-                            <a href="assets/paginas/sobreNos.html">Sobre Nos</a>
-                        </li>
-
-                        <li>
-                            <a href="assets/paginas/contato.html">Entre em Contato</a>
-                        </li>
-
-                        <li>
-                            <a href="assets/paginas/informacoes.html">Mais Informações</a>
-                        </li>
-                    </ul>
                 </div>
+
+                <ul class="menu-navbar-paginas">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="assets/paginas/produtos.html">Produtos e Serviços</a>
+                    </li>
+
+                    <li>
+                        <a href="assets/paginas/sobreNos.html">Sobre Nos</a>
+                    </li>
+
+                    <li>
+                        <a href="assets/paginas/contato.html">Entre em Contato</a>
+                    </li>
+
+                    <li>
+                        <a href="assets/paginas/informacoes.html">Mais Informações</a>
+                    </li>
+                </ul>
             </div>
         `
         return nav
     }
 
-    banner(conteudo){
+    banner(pagina, titulo) {
         let camada = document.createElement('div');
         camada.setAttribute('class', 'camada-preta');
-        let conteudo = document.createElement('div');
+        let conteudo = document.createElement('div')
         conteudo.setAttribute('class', 'h1-banner');
-        conteudo.innerHTML = conteudo;
+        let h1 = document.createElement('h1');
+        h1.textContent = titulo
+        conteudo.appendChild(h1)
 
-        camada.appendChild(conteudo);
-        return camada;
-    }
-
-    enviarEmail(img, tipoPag, titulo, contTitulo){
-        let form = ``
-
-        if(titulo === true){
-            conteudo += `<h3>${contTitulo}</h3>`
+        if (pagina === 'index') {
+            const btn = document.createElement('a')
+            btn.setAttribute('href', '#')
+            btn.textContent = 'Entre em Contato'
+            conteudo.appendChild(btn)
         }
 
-        if(img === true){
-            if(tipoPag === 'index'){ 
-                // colorcar o link da iamgem correto de acordo com o diret´orio da pagina
-                form += `<img src="#" alt="">`
-            }
-            else{
-                form += `<img src="#" alt="">`
-            }
+        camada.appendChild(conteudo)
+
+        return camada
+    }
+
+    enviarEmail(img, contImg, titulo, contTitulo) {
+        let form = ``
+        let classe = 'sImagem'
+
+        if (titulo === true) {
+            form += `<div><h3>${contTitulo}</h3></div>`
+        }
+
+        if (img === true) {
+            // colorcar o link da iamgem correto de acordo com o diret´orio da pagina
+            form += `<img src="${contImg}" alt="">`
+            classe = 'cImagem'
         }
 
         form += `
-            <form>
+            <form class="${classe}">
                 <label for="nome-entre-contato-email">Nome / Empresa</label>
                 <input type="text" name="nome-entre-contato-email" required>
 
@@ -99,17 +107,19 @@ class ElementosHtml {
                 <input type="text" name="assunto-entre-contato-email" required>
 
                 <label for="mensagem-entre-contato-email">Mensagem</label>
-                <textarea name="mensagem-entre-contato-email" required>
+                <textarea name="mensagem-entre-contato-email" required></textarea>
+
+                <button>Enviar</button>
             </form>
-        `
+        `;
         return form
     }
 
-    redesSociais(titulo, contTitulo){
+    redesSociais(titulo, contTitulo) {
 
         let conteudo = ``;
 
-        if(titulo === true){
+        if (titulo === true) {
             conteudo = `<h3>${contTitulo}</h3>`
         }
 
@@ -141,8 +151,32 @@ class ElementosHtml {
         return conteudo
     }
 
-    rodape(){
+    rodape() {
+        let rodape = `
+        <h2>LP- Fardamentos e Atoalhados</h2>
 
+            <div class="div-ul">
+            <ul class="ul-paginas">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="assets/paginas/sobreNos.html">Sobre Nós</a></li>
+                <li><a href="assets/paginas/produtos.html">Serviços</a></li>
+            </ul>
+
+            <ul class="ul-termos-politicas">
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Politicas de Privacidade</a></li>
+            </ul>
+        </div>
+
+            <div class="direitos-autorais">
+                <small>
+                <a href="#">Diretos das imagens pertencentes aos seus respectivos donos</a>
+                </small> |
+                <small><a href="https://karlakirchhoff.netlify.app/" target="_blank">Site desenvolvido por: Karla Kirchhoff</a></small>
+            </div>
+        `
+
+        return rodape
     }
 }
 

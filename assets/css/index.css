@@ -1,0 +1,285 @@
+.diferenciais-lp{
+    width: var(--largura);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.diferenciais-lp p{
+    text-align: center;
+}
+
+.diferenciais-lp h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.diferenciais-lp ul{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.diferenciais-lp ul li{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.diferenciais-lp ul img{
+    width: 100px;
+    height: 100px;
+}
+
+.diferenciais-lp .btn-mostrar{
+    display: none;
+}
+
+.btn-nossa-historia{
+    width: 30%;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: var(--cor-azul);
+    border-radius: 50px;
+}
+
+.index-categorias{
+    width: 100%;
+    margin: 30px 0;
+}
+
+.index-categorias .camada-preta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txt-index-categorias{
+    display: grid;
+    grid-template-columns: 30% auto;
+    background-color: rgba(0, 0, 0, 0.494);
+}
+
+.txt-index-categorias p{
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.categorias-index-categorias{
+    width: 100%;
+    padding: 50px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 20px;
+}
+
+.categorias-index-categorias .card-categorias{
+    width: 45%;
+    min-width: 120px;
+    height: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+}
+
+.categorias-index-categorias .card-categorias img{
+    width: 100%;
+    height: 80%;
+    background-color: #272530;
+}
+
+.categorias-index-categorias .card-categorias p{
+    font-size: 18px;
+    text-align: center;
+}
+
+.btn-index-categorias{
+    width: 65%;
+    margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: var(--cor-azul-900);
+    border: 1px dotted white;
+    outline: 5px solid var(--cor-azul-900);
+}
+
+.calltoaction-lp{
+    width: 100%;
+    padding: 40px 10%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    color: white;
+    background-color: #2725308f;
+}
+
+.txt-calltoaction-lp{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.txt-calltoaction-lp img{
+    width: 80px;
+    height: 80px;
+    background-color: red;
+}
+
+.txt-calltoaction-lp h3{
+    font-size: 28px;
+}
+
+.calltoaction-lp p{
+    text-align: center;
+}
+
+.calltoaction-lp a{
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+}
+
+@media (max-width: 610px){
+    .btn-nossa-historia{
+        width: 50%;
+    }
+
+    .diferenciais-lp ul li{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 440px){
+    .diferenciais-lp ul{
+        margin-top: 10px;
+        gap: 30px;
+    }
+
+    .diferenciais-lp ul li p{
+        height: 100px;
+        overflow: scroll;
+        padding-right: 10px;
+    }
+
+    .diferenciais-lp .btn-mostrar{
+        display: block;
+        text-align: center;
+    }
+
+    .btn-nossa-historia{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 400px){
+    .diferenciais-lp h3{
+        font-size: 17px;
+    }
+
+    .categorias-index-categorias{
+        padding: 50px 5%;
+        gap: 30px 20px;
+    }
+}
+
+@media (max-width: 350px){
+    .btn-nossa-historia{
+        width: 70%;
+    }
+
+    .categorias-index-categorias .card-categorias{
+        height: 200px;
+    }
+
+    .categorias-index-categorias .card-categorias p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 330px){
+    .txt-calltoaction-lp h3{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 310px){
+    .categorias-index-categorias .card-categorias{
+        padding: 7px;
+    }
+
+    .categorias-index-categorias .card-categorias p{
+        font-size: 15px;
+    }
+
+    .calltoaction-lp{
+        gap: 20px;
+    }
+}
+
+@media (max-width: 290px){
+    .categorias-index-categorias .card-categorias{
+        width: 80%;
+        height: 300px;
+        padding: 10px;
+    }
+
+    .categorias-index-categorias .card-categorias p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 280px){
+    .diferenciais-lp ul li{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    .diferenciais-lp ul li img{
+        margin: auto;
+    }
+
+    .diferenciais-lp ul li p{
+        height: inherit;
+        overflow: visible;
+        padding-right: 0;
+    }
+
+    .diferenciais-lp .btn-mostrar{
+        display: none;
+    }
+
+    .txt-calltoaction-lp img{
+        height: 50px;
+        width: 50px;
+    }
+
+    .txt-calltoaction-lp h3{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 260px){
+    .btn-nossa-historia{
+        width: 90%;
+    }
+
+    .calltoaction-lp{
+        padding: 30px 5%;
+    }
+}

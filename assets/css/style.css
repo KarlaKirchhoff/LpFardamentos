@@ -1,6 +1,387 @@
+:root{
+    --cor-primaria: #2a8a5c;
+    --cor-cinza: rgb(31, 31, 31);
+    --cor-azul:  #4d98e6;
+    --cor-azul-900: #272530;
+    --largura: 80%;
+}
+
 *{
     padding: 0;
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
+}
+
+li{list-style: none;}
+
+h2{
+    font-size: 40px;
+    text-align: center;
+    color: var(--cor-azul-900);
+}
+
+strong{ color: var(--cor-primaria);}
+
+.camada-preta{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.517);
+}
+
+body, a{
+    color: var(--cor-cinza);
+}
+
+body{
+    font-family: sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar nav{
+    height: 60px;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar nav .logo p{
+    font-size: 15px;
+}
+
+.navbar nav .logo img{
+    height: 45px;
+    width: 45px;
+    background-color: red;
+}
+
+.navbar nav .ul-paginas{
+    display: flex;
+    gap: 10px;
+}
+
+.navbar nav .ul-paginas a{
+    color: var(--cor-cinza);
+}
+
+.navbar nav .menu-hamburguer{
+    display: none;
+}
+
+.navbar .menu-navbar{
+    padding: 20px 10%;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    background-color: var(--cor-primaria);
+}
+
+.navbar .menu-navbar .logo-area{
+    display: flex;
+    align-items: center;
+}
+
+.navbar > div a{
+    color: white;
+}
+
+.navbar .menu-navbar .menu-navbar-paginas{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.banner{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+.banner .camada-preta{
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.camada-preta .h1-banner{
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.h1-banner h1{
+    font-size: 40px;
+}
+
+.h1-banner a{
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+}
+
+.form-contato-email{
+    width: var(--largura);
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 40px auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-contato-email > div{
+    grid-column: 1/3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.form-contato-email h3{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-contato-email img{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+.form-contato-email form{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.form-contato-email form input, .form-contato-email form textarea{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-contato-email form label{
+    font-size: 20px;
+}
+
+.form-contato-email form textarea{
+    height: 80px;
+}
+
+.form-contato-email form button{
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+    font-size: 15px;
+    color: white;
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 50px;
+}
+
+.rodape{
+    width: 100%;
+    padding: 30px 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    background-color: var(--cor-primaria);
+}
+
+.rodape h2{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.rodape a{
+    color: white;
+}
+
+.rodape .div-ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.rodape .div-ul .ul-termos-politicas{
+    text-align: end;
+}
+
+.rodape .direitos-autorais a{
+    color: rgb(0, 255, 136);
+}
+
+@media (max-width: 800px){
+    .banner{
+        height: 300px;
+    }
+
+    .rodape{
+        padding: 30px 10%;
+    }
+
+    .form-contato-email form button{
+        width: 70%;
+    }
+}
+
+@media (max-width: 716px){
+    .banner .camada-preta .h1-banner{
+        align-items: start;
+    }
+}
+
+@media (max-width: 560px){
+    .banner  .camada-preta{
+        justify-content: start;
+    }
+
+    .h1-banner{
+        width: 60% !important;
+    }
+
+    .h1-banner h1{
+        font-size: 30px;
+    }
+    .h1-banner a{
+        font-size: 15px;
+    }
+
+    .form-contato-email form input, .form-contato-email form textarea{
+        margin-bottom: 10px;
+    }
+    
+    .form-contato-email form label{
+        font-size: 15px;
+    }
+
+    .form-contato-email form button{
+        width: 90%;
+    }
+}
+
+@media (max-width: 510px) {
+
+    h2{
+    font-size: 30px;
+    }
+
+    .navbar nav .ul-paginas .hidden2{
+        display: none;
+    }
+
+    .navbar nav .menu-hamburguer{
+        display: block;
+    }
+    
+}
+
+@media (max-width: 440px){
+    .banner{
+        height: 250px;
+    }
+}
+
+@media (max-width:420px){
+    .form-contato-email form textarea{
+        height: 50px;
+    }
+
+    .form-contato-email form button{
+        padding: 5px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 375px){
+    .navbar nav .ul-paginas .hidden{
+        display: none;
+    }
+
+    .banner{
+        height: 200px;
+    }
+
+    .h1-banner h1{
+        font-size: 25px;
+    }
+
+    .h1-banner a{
+        padding: 8px 10px;
+    }
+
+    .form-contato-email h3{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 355px){
+    .form-contato-email{
+        width: 90%;
+    }
+}
+
+@media (max-width: 312px){
+    .navbar nav .logo p{
+        font-size: 20px;
+    }
+
+    .navbar nav .logo span{
+        display: none;
+    }
+
+    .form-contato-email{
+        width: var(--largura);
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+    
+    .form-contato-email > div{
+        grid-column: inherit;
+    }
+
+    .form-contato-email img{
+        height: 150px;
+    }
+}
+
+@media (max-width: 300px){
+    h2{font-size: 20px;}
+}
+
+
+
+@media (max-width: 200px){
+    .rodape .div-ul{
+        flex-wrap: wrap;
+    }
+
+    .rodape .div-ul ul{
+        width: 100%;
+        text-align: center !important;
+    }
 }
