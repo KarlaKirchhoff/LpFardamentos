@@ -1,6 +1,10 @@
 class ElementosHtml {
-    navbar() {
-        const nav = `
+    navbar(pagina) {
+
+        let nav  = ``;
+        
+        if(pagina === 'index'){
+            nav = `
         <nav>
                 <a href="index.html" class="logo">
                     <img src="#" alt="">
@@ -29,10 +33,10 @@ class ElementosHtml {
             </nav>
 
             <div class="menu-navbar">
-                <div class="logo-area">
+                <a href="index.html" class="logo-area">
                     <img src="#" alt="">
                     <p>LP - Fardamentos e Atoalhados</p>
-                </div>
+                </a>
 
                 <ul class="menu-navbar-paginas">
                     <li>
@@ -57,6 +61,66 @@ class ElementosHtml {
                 </ul>
             </div>
         `
+        }else{
+            nav = `
+        <nav>
+                <a href="../../index.html" class="logo">
+                    <img src="#" alt="">
+                    <p>LP<br><span>Fardamentos</span></p>   
+                </a>
+
+                <ul class="ul-paginas">
+                    <li class="li-paginas hidden">
+                        <a href="../../index.html">Home</a>
+                    </li>
+
+                    <li class="li-paginas">
+                        <a href="../paginas/produtos.html">Produtos</a>
+                    </li>
+
+                    <li class="li-paginas hidden hidden2">
+                        <a href="../paginas/sobreNos.html">Sobre Nós</a>
+                    </li>
+
+                    <li class="li-paginas hidden hidden2">
+                        <a href="../paginas/contato.html">Contato</a>
+                    </li>
+                </ul>
+
+                <div class="menu-hamburguer">...</div>
+            </nav>
+
+            <div class="menu-navbar">
+                <a href="../../index.html class="logo-area">
+                    <img src="#" alt="">
+                    <p>LP - Fardamentos e Atoalhados</p>
+                </a>
+
+                <ul class="menu-navbar-paginas">
+                    <li>
+                        <a href="../../index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="../paginas/produtos.html">Produtos e Serviços</a>
+                    </li>
+
+                    <li>
+                        <a href="../paginas/sobreNos.html">Sobre Nos</a>
+                    </li>
+
+                    <li>
+                        <a href="../paginas/contato.html">Entre em Contato</a>
+                    </li>
+
+                    <li>
+                        <a href="../paginas/informacoes.html">Mais Informações</a>
+                    </li>
+                </ul>
+            </div>
+        `
+        }
+
         return nav
     }
 
@@ -151,8 +215,12 @@ class ElementosHtml {
         return conteudo
     }
 
-    rodape() {
-        let rodape = `
+    rodape(pagina) {
+
+        let rodape = ``;
+
+        if(pagina === 'index'){
+            rodape = `
         <h2>LP- Fardamentos e Atoalhados</h2>
 
             <div class="div-ul">
@@ -175,6 +243,31 @@ class ElementosHtml {
                 <small><a href="https://karlakirchhoff.netlify.app/" target="_blank">Site desenvolvido por: Karla Kirchhoff</a></small>
             </div>
         `
+        }else{
+            rodape = `
+        <h2>LP- Fardamentos e Atoalhados</h2>
+
+            <div class="div-ul">
+            <ul class="ul-paginas">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../paginas/sobreNos.html">Sobre Nós</a></li>
+                <li><a href="../paginas/produtos.html">Serviços</a></li>
+            </ul>
+
+            <ul class="ul-termos-politicas">
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Politicas de Privacidade</a></li>
+            </ul>
+        </div>
+
+            <div class="direitos-autorais">
+                <small>
+                <a href="#">Diretos das imagens pertencentes aos seus respectivos donos</a>
+                </small> |
+                <small><a href="https://karlakirchhoff.netlify.app/" target="_blank">Site desenvolvido por: Karla Kirchhoff</a></small>
+            </div>
+        `
+        }
 
         return rodape
     }

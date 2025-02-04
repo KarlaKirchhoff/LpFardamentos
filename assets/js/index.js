@@ -1,15 +1,14 @@
 import { ElementosHtml } from './ElementosHtml.js'
-const html= new ElementosHtml();
+const html = new ElementosHtml();
 
-function criarBanner(){
-    let banner = document.querySelector('.banner');
-    banner.appendChild(html.banner('index', 'LP Fardamentos e Atoalhados'))
-}
+let navbar = document.querySelector('.navbar');
+navbar.innerHTML = html.navbar('index');
 
-function carregarFormEmail(){
-    let form = document.querySelector('.form-contato-email');
-    form.innerHTML = html.enviarEmail(true, '#', true, 'Entre em Contato')
-}
+let banner = document.querySelector('.banner');
+banner.appendChild(html.banner('index', 'LP Fardamentos e Atoalhados'))
 
-criarBanner()
-carregarFormEmail()
+let form = document.querySelector('.form-contato-email');
+form.innerHTML = html.enviarEmail(true, '#', true, 'Entre em Contato')
+
+let rodape = document.querySelector('.rodape');
+rodape.innerHTML = html.rodape('index');
