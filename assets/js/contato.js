@@ -8,4 +8,5 @@ banner.appendChild(html.banner('', 'Entre em  Contato'));
 let rodape = document.querySelector('.rodape');
 rodape.innerHTML = html.rodape('#');
 
-let forEmail
+let formEmail = document.querySelector('.lista-redes-sociais');
+formEmail.innerHTML = html.redesSociais(true, 'CANAIS DE ATENDIMENTO');

@@ -150,13 +150,13 @@ class ElementosHtml {
         let classe = 'sImagem'
 
         if (titulo === true) {
-            form += `<div><h3>${contTitulo}</h3></div>`
+            form += `<div><h3>${contTitulo}</h3></div>`            
         }
 
         if (img === true) {
             // colorcar o link da iamgem correto de acordo com o diret´orio da pagina
             form += `<img src="${contImg}" alt="">`
-            classe = 'cImagem'
+            classe = 'cImagem'            
         }
 
         form += `
@@ -175,7 +175,7 @@ class ElementosHtml {
 
                 <button>Enviar</button>
             </form>
-        `;
+        `;        
         return form
     }
 
@@ -184,31 +184,28 @@ class ElementosHtml {
         let conteudo = ``;
 
         if (titulo === true) {
-            conteudo = `<h3>${contTitulo}</h3>`
+            conteudo = `<h2>${contTitulo}</h2>`
         }
 
         conteudo += `
-        <address>lpfardamentosuniformes@gmail.com</address>
-            <address>44 44444-4444</address>
-            <address>
-                <ul>
-                    <li>
-                        <a href="#"></a>
-                    </li>
+        <address class="email-redes-sociais">lpfardamentosuniformes<span>@gmail.com</span></address>
+            <address>+351 960 106 373</address>
+            <address class="contato-redes-sociais">
+                    <a href="#">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </a>
 
-                    <li>
-                        <a href="#"></a>
-                    </li>
+                    <a href="#">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </a>
 
-                    <li>
-                        <a href="#"></a>
-                    </li>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
 
-                    <li>
-                        <a href="#"></a>
-                    </li>
-
-                </ul>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
             </address>
         `
 

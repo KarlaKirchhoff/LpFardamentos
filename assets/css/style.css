@@ -108,6 +108,9 @@ main{
     width: 100%;
     height: 400px;
     margin-bottom: 50px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .banner .camada-preta{
@@ -135,6 +138,10 @@ main{
     font-size: 20px;
     color: white;
     border: 1px solid white;
+}
+
+.form-contato-email .sImagem{
+    margin-top: 20px;
 }
 
 .form-contato-email{
@@ -196,6 +203,31 @@ main{
     background-color: var(--cor-primaria);
     border: none;
     border-radius: 50px;
+}
+
+.lista-redes-sociais{
+    width: var(--largura);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contato-redes-sociais{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.contato-redes-sociais ion-icon{
+    padding: 15px;
+    font-size: 30px;
+    color: var(--cor-primaria);
+    border: 3px solid var(--cor-primaria);
+    border-radius: 50%;
 }
 
 .rodape{
@@ -299,6 +331,16 @@ main{
     
 }
 
+@media (max-width: 487px){
+    .contato-redes-sociais{
+        width: 100%;
+    }
+
+    .contato-redes-sociais ion-icon{
+        padding: 15px;
+    }
+}
+
 @media (max-width: 440px){
     .banner{
         height: 250px;
@@ -313,6 +355,12 @@ main{
     .form-contato-email form button{
         padding: 5px;
         font-size: 15px;
+    }
+}
+
+@media (max-width: 390px){
+    .contato-redes-sociais ion-icon{
+        padding: 13px;
     }
 }
 
@@ -338,9 +386,31 @@ main{
     }
 }
 
+@media(max-width: 367px){
+    .contato-redes-sociais ion-icon{
+        font-size: 22px;
+    }
+}
+
 @media (max-width: 355px){
     .form-contato-email{
         width: 90%;
+    }
+}
+
+@media (max-width: 340px){
+    .contato-redes-sociais ion-icon{
+        font-size: 25px;
+    }
+
+    .lista-redes-sociais{
+        width: 90%;
+    }
+}
+
+@media (max-width: 325px){
+    .contato-redes-sociais ion-icon{
+        padding: 10px;
     }
 }
 
@@ -367,13 +437,30 @@ main{
     .form-contato-email img{
         height: 150px;
     }
+
 }
 
 @media (max-width: 300px){
     h2{font-size: 20px;}
+
+    .lista-redes-sociais .email-redes-sociais{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
+@media (max-width: 280px){
 
+    .contato-redes-sociais{
+        justify-content: center;
+    }
+
+    .contato-redes-sociais ion-icon{
+        padding: 20px;
+        font-size: 35px;
+    }
+}
 
 @media (max-width: 200px){
     .rodape .div-ul{
@@ -383,5 +470,9 @@ main{
     .rodape .div-ul ul{
         width: 100%;
         text-align: center !important;
+    }
+
+    .lista-redes-sociais{
+        overflow-x: hidden;
     }
 }
