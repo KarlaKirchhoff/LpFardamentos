@@ -5,6 +5,23 @@ article{
     gap: 10px;
 }
 
+article h2{
+    margin-bottom: 20px;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.titulo img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
 .div-quem-somos{
     width: 100%;
     display: grid;

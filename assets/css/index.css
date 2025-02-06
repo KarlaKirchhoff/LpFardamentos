@@ -52,6 +52,7 @@
     width: 100%;
     margin: 30px 0;
     background-image: url("../img/index/duas-pessoas-avental.jpg");
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
@@ -111,6 +112,18 @@
 .categorias-index-categorias .card-categorias p{
     font-size: 18px;
     text-align: center;
+}
+
+#card-categorias-militar img{
+    object-position: 30% center;
+}
+
+#card-categorias-medico img{
+    object-position: center 20%;
+}
+
+#card-categorias-horeca img{
+    object-position: 70% center;
 }
 
 .btn-index-categorias{

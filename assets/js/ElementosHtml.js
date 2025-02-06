@@ -7,7 +7,7 @@ class ElementosHtml {
             nav = `
         <nav>
                 <a href="index.html" class="logo">
-                    <img src="#" alt="">
+                    <img src="assets/img/logo-lp-fardamentos.jpg" alt="">
                     <p>LP<br><span>Fardamentos</span></p>   
                 </a>
 
@@ -65,7 +65,7 @@ class ElementosHtml {
             nav = `
         <nav>
                 <a href="../../index.html" class="logo">
-                    <img src="#" alt="">
+                    <img src="../img/logo-lp-fardamentos.jpg" alt="">
                     <p>LP<br><span>Fardamentos</span></p>   
                 </a>
 
@@ -122,6 +122,14 @@ class ElementosHtml {
         }
 
         return nav
+    }
+
+    menuHamburguer(){
+        let btn = document.querySelector('.menu-hamburguer');
+        let menu = document.querySelector('.menu-navbar')
+        btn.addEventListener('click', ()=>{
+            menu.classList.toggle('ativo')
+        })
     }
 
     banner(pagina, titulo) {
@@ -204,7 +212,7 @@ class ElementosHtml {
                     </a>
 
                     <a href="#">
-                        <ion-icon name="logo-instagram"></ion-icon>
+                        <ion-icon name="logo-facebook"></ion-icon>
                     </a>
             </address>
         `
@@ -225,6 +233,7 @@ class ElementosHtml {
                 <li><a href="index.html">Home</a></li>
                 <li><a href="assets/paginas/sobreNos.html">Sobre Nós</a></li>
                 <li><a href="assets/paginas/produtos.html">Serviços</a></li>
+                <li><a href="assets/paginas/contato.html">Contato</a></li>
             </ul>
 
             <ul class="ul-termos-politicas">
@@ -249,6 +258,7 @@ class ElementosHtml {
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="../paginas/sobreNos.html">Sobre Nós</a></li>
                 <li><a href="../paginas/produtos.html">Serviços</a></li>
+                <li><a href="../paginas/contato.html">Contato</a></li>
             </ul>
 
             <ul class="ul-termos-politicas">

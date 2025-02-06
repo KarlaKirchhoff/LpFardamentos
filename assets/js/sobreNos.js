@@ -2,6 +2,8 @@ import { ElementosHtml } from "./ElementosHtml.js";
 const html = new ElementosHtml();
 let navbar = document.querySelector('.navbar');
 navbar.innerHTML = html.navbar('#');
+html.menuHamburguer();
+
 let banner = document.querySelector('.banner');
 banner.style.backgroundImage = `url('../img/sobreNos/foto-loja-lp-fardamentos.jpg')`
 banner.appendChild(html.banner('', 'Nossa História'));

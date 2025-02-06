@@ -1,1 +1,11 @@
-tt
+main{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.form-contato-email{
+    display: block;
+}

@@ -64,7 +64,6 @@ main{
 .navbar nav .logo img{
     height: 45px;
     width: 45px;
-    background-color: red;
 }
 
 .navbar nav .ul-paginas{
@@ -87,6 +86,10 @@ main{
     gap: 10px;
     color: white;
     background-color: var(--cor-primaria);
+}
+
+.navbar .menu-navbar.ativo{
+    display: flex !important;
 }
 
 .navbar .menu-navbar .logo-area{

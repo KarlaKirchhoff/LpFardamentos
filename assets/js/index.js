@@ -3,6 +3,7 @@ const html = new ElementosHtml();
 
 let navbar = document.querySelector('.navbar');
 navbar.innerHTML = html.navbar('index');
+html.menuHamburguer();
 
 let banner = document.querySelector('.banner');
 banner.style.backgroundImage = `url('./assets/img/index/banner-homem-avental-marrom-cozinha.png')`
