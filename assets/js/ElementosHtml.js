@@ -199,19 +199,19 @@ class ElementosHtml {
         <address class="email-redes-sociais">lpfardamentosuniformes<span>@gmail.com</span></address>
             <address>+351 960 106 373</address>
             <address class="contato-redes-sociais">
-                    <a href="#">
+                    <a href="wa.me/351960106373" target="_blank">
                         <ion-icon name="logo-whatsapp"></ion-icon>
                     </a>
 
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <ion-icon name="call-outline"></ion-icon>
                     </a>
 
-                    <a href="#">
+                    <a href="https://www.instagram.com/lp_toalhasefardamentos/" target="_blank">
                         <ion-icon name="logo-instagram"></ion-icon>
                     </a>
 
-                    <a href="#">
+                    <a href="https://www.facebook.com/share/15jKrBp43M/" target="_blank">
                         <ion-icon name="logo-facebook"></ion-icon>
                     </a>
             </address>
