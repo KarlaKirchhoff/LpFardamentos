@@ -143,7 +143,8 @@ class ElementosHtml {
 
         if (pagina === 'index') {
             const btn = document.createElement('a')
-            btn.setAttribute('href', '#')
+            btn.setAttribute('href', "https://wa.me/351960106373")
+            btn.setAttribute('target', '_blank')
             btn.textContent = 'Entre em Contato'
             conteudo.appendChild(btn)
         }
@@ -199,7 +200,7 @@ class ElementosHtml {
         <address class="email-redes-sociais">lpfardamentosuniformes<span>@gmail.com</span></address>
             <address>+351 960 106 373</address>
             <address class="contato-redes-sociais">
-                    <a href="wa.me/351960106373" target="_blank">
+                    <a href="https://wa.me/351960106373" target="_blank">
                         <ion-icon name="logo-whatsapp"></ion-icon>
                     </a>
 

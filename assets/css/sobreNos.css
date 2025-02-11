@@ -48,6 +48,57 @@ article h2{
     display: block;
 }
 
+@media (min-width: 650px){
+    article{
+        padding-top: 30px;
+    }
+
+    article p{
+        font-size: 20px;
+    }
+
+    .titulo{
+        gap: 50px;
+    }
+
+    .titulo img{
+        height: 300px;
+    }
+
+    .div-quem-somos{
+        gap: 25px;
+        margin: 20px 0;
+    }
+
+}
+
+@media (min-width: 800px){
+    article{
+        padding-bottom: 50px;
+    }
+
+    article p{
+        font-size: 25px;
+    }
+
+    .titulo{
+        gap: 80px;
+    }
+
+    #div1-quem-somos{
+        grid-template-columns: auto 40%;
+    }
+    
+    #div2-quem-somos{
+        grid-template-columns: 40% auto;
+    }
+
+    section.form-contato-email{
+        margin-bottom: 90px;
+    }
+}
+
+
 @media (max-width: 420px){
     article{
         width: 90%;

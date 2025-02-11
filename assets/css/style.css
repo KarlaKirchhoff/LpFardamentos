@@ -43,12 +43,21 @@ main{
     align-items: center;
 }
 
+.espaco{
+    width: 1005;
+    height: 60px;
+}
+
 .navbar nav{
+    width: 100%;
     height: 60px;
     padding: 0 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    background-color: white;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.316);
 }
 
 .navbar nav .logo{
@@ -71,16 +80,32 @@ main{
     gap: 10px;
 }
 
+.navbar nav .ul-paginas li a{
+    padding: 5px 0;
+}
+
+.navbar nav .ul-paginas li a:hover{
+    cursor: pointer;
+    padding: 5px 15px;
+    background-color: rgba(241, 248, 240, 0.694);
+}
+
 .navbar nav .ul-paginas a{
     color: var(--cor-cinza);
 }
 
 .navbar nav .menu-hamburguer{
+    padding: 10px;
     display: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.122);
 }
 
 .navbar .menu-navbar{
+    width: 100%;
+    top: 60px;
     padding: 20px 10%;
+    position: fixed;
     display: none;
     flex-direction: column;
     gap: 10px;
@@ -113,7 +138,6 @@ main{
     margin-bottom: 50px;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .banner .camada-preta{
@@ -141,6 +165,10 @@ main{
     font-size: 20px;
     color: white;
     border: 1px solid white;
+}
+
+.form-contato-email .sImagem button{
+    max-width: 600px;
 }
 
 .form-contato-email .sImagem{
@@ -174,7 +202,7 @@ main{
 .form-contato-email img{
     height: 100%;
     width: 100%;
-    background-color: red;
+    object-fit: cover;
 }
 
 .form-contato-email form{
@@ -185,8 +213,9 @@ main{
 }
 
 .form-contato-email form input, .form-contato-email form textarea{
-    margin-bottom: 20px;
     width: 100%;
+    padding: 10px 10px;
+    margin-bottom: 20px;
 }
 
 .form-contato-email form label{
@@ -267,6 +296,72 @@ main{
 
 .rodape .direitos-autorais a{
     color: rgb(0, 255, 136);
+}
+
+@media (min-width: 800px){
+    body{
+        font-size: 20px;
+    }
+
+    .navbar nav .ul-paginas{
+        gap: 20px;
+    }
+
+    .form-contato-email {
+        margin: 50px auto;
+        grid-template-rows: 60px auto;
+        gap: 50px 20px;
+    }
+
+    .form-contato-email h3{
+        font-size: 50px;
+    }
+
+    .form-contato-email form label, .form-contato-email form input, .form-contato-email form textarea{
+        font-size: 20px;
+    }
+
+    .form-contato-email form input, .form-contato-email form textarea{
+        padding: 10px;
+    }
+
+    .form-contato-email form textarea{
+        height: 300px;
+    }
+    .form-contato-email form button{
+        width: 60%;
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .lista-redes-sociais{
+        gap: 50px;
+        padding-bottom: 70px;
+    }
+
+    .lista-redes-sociais address{
+        font-size: 25px;
+    }
+    
+    .contato-redes-sociais{
+        max-width: 700px;
+        gap: 30px;
+    }
+
+    .contato-redes-sociais ion-icon{
+        padding: 28px;
+        font-size: 40px;
+    }
+
+    .rodape{
+        padding: 70px 15%;
+        gap: 40px;
+    }
+    
+    .rodape h2{
+        font-size: 30px;
+    }
+
 }
 
 @media (max-width: 800px){

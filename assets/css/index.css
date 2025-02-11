@@ -4,9 +4,9 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
-}b
+}
 
-.diferenciais-lp p{
+.diferenciais-lp > p{
     text-align: center;
 }
 
@@ -126,15 +126,19 @@
     object-position: 70% center;
 }
 
+#card-categorias-personalizacao img{
+    object-position: center 30%;
+}
+
 .btn-index-categorias{
     width: 65%;
     margin-bottom: 30px;
     padding: 10px;
     text-align: center;
     color: white;
-    background-color: var(--cor-azul-900);
+    background-color: var(--cor-primaria);
     border: 1px dotted white;
-    outline: 5px solid var(--cor-azul-900);
+    outline: 5px solid var(--cor-primaria);
 }
 
 .lista-redes-sociais{
@@ -143,7 +147,7 @@
 
 .calltoaction-lp{
     width: 100%;
-    padding: 40px 10%;
+    padding: 70px 10%;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -156,16 +160,15 @@
 }
 
 .txt-calltoaction-lp{
-    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
 }
 
 .txt-calltoaction-lp img{
     width: 80px;
     height: 80px;
-    background-color: red;
 }
 
 .txt-calltoaction-lp h3{
@@ -184,6 +187,107 @@
     border: 1px solid white;
 }
 
+@media (min-width: 800px){
+
+    .diferenciais-lp{
+        width: 75%;
+        margin-bottom: 70px;
+        gap: 50px;
+    }
+
+    .diferenciais-lp ul{
+        gap: 50px;
+    }
+
+    .diferenciais-lp ul li{
+        gap: 30px;
+    }
+
+    .diferenciais-lp ul img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .btn-nossa-historia{
+        width: 35%;
+        padding: 20px;
+    }
+
+    .categorias-index-categorias .card-categorias{
+        width: 25%;
+    }
+    
+    .txt-index-categorias img{
+        height: 300px;
+    }
+    
+    .txt-index-categorias p{
+        padding: 30px;
+    }
+
+    .txt-calltoaction-lp img{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .txt-calltoaction-lp h3{
+        font-size: 45px;
+        width: 65%;
+    }
+}
+
+@media (min-width: 1040px){
+
+    .diferenciais-lp ul img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .diferenciais-lp ul li{
+        text-align: center;
+        gap: 40px;
+    }
+
+    .categorias-index-categorias{
+        padding: 90px 10%;
+        gap: 60px 40px;
+    }
+
+    .txt-index-categorias img{
+        height: 350px;
+    }
+
+    .txt-index-categorias p{
+        padding: 50px 90px;
+        font-size: 30px;
+    }
+
+    .categorias-index-categorias .card-categorias{
+        height: 320px;
+    }
+
+    .categorias-index-categorias .card-categorias p{
+        margin-top: 15px;
+    }
+
+    .btn-index-categorias{
+        width: 40%;
+        padding: 15px;
+        margin-bottom: 90px;
+        font-weight: bold;
+    }
+
+    .txt-calltoaction-lp h3{
+        font-size: 45px;
+        width: max-content;
+    }
+
+    .calltoaction-lp a{
+        width: 60%;
+        padding: 20px;
+    }
+}
+
 @media (max-width: 610px){
     .btn-nossa-historia{
         width: 50%;
@@ -192,6 +296,7 @@
     .diferenciais-lp ul li{
         font-size: 15px;
     }
+    
 }
 
 @media (max-width: 440px){

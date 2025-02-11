@@ -40,6 +40,7 @@
 
 .galeria-produto-categoria{
     width: 100%;
+    max-width: 1000px;
     height: 350px;
     display: grid;
     grid-template-columns: 48% 48%;
@@ -72,10 +73,53 @@
 
 .btn-produto-categoria{
     width: 70%;
+    max-width: 500px;
     padding: 10px 5px;
     text-align: center;
     color: white;
     background-color: var(--cor-primaria);
+}
+
+@media (min-width: 650px){
+    .galeria-produto-categoria{
+        height: 450px;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 800px){
+    .produtos-categorias{
+        gap: 80px;
+        margin-bottom: 100px;
+    }
+
+    .produtos-categorias h2{
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .produto-categoria h3{
+        font-size: 40px;
+    }
+
+    .produto-categoria ul{
+        padding: 20px 0 40px 0;
+        gap: 10px;
+    }
+    
+    .produto-categoria ul li{
+        font-size: 25px;
+    }
+
+    .galeria-produto-categoria{
+        height: 550px;
+    }
+}
+
+@media (min-width: 1070px){
+    .galeria-produto-categoria{
+        height: 650px;
+    }
 }
 
 @media (max-width: 350px){
